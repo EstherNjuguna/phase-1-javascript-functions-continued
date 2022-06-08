@@ -15,14 +15,13 @@ function saturdayFun(fun='roller-skate' ,hobby='I want to bath my dog'){
             return (`This Monday, I will ${home}.`);
     }
 
-    function wrapAdjective(wrap = '*' , special="special") 
+    function wrapAdjective(wrap = '*') 
        // wrapAdjective("*")("a dedicated programmer")  
         //function wrapAdjective(wrap = '*' , special) 
-        {
-            if (special) {
-                return (special => `You are *a hard worker*!` );
+        
+            {
+                return function (day='special') {
+                    return `You are ${wrap}${day}${wrap}!`
+                }
             }
-            else 
-                return (wrap =>`You are ||a dedicated programmer||!`)
-        }
         
